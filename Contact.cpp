@@ -17,7 +17,7 @@ void Contact::setContactName(string name){
 	contactName = name;
 }
 
-string Contact::getPhoneNumber(){
+int Contact::getPhoneNumber(){
 	return phoneNum;
 }
 

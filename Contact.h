@@ -12,7 +12,7 @@ public:
 	string getContactName();
 	void setContactName(string name);
 
-	string getPhoneNumber();
+	int getPhoneNumber();
 	void setPhoneNumber(int number);
 
 private:
