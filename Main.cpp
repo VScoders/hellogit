@@ -5,6 +5,8 @@
 
 using namespace std;
 
+int linearSearch(auto Data, auto key);//prototype
+
 int main(){
 	vector<Contact> contactInfo(4);
 	int num;
