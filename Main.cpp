@@ -9,6 +9,8 @@ int main(){
 	vector<Contact> contactInfo(4);
 	int num;
 	string name;
+	
+	int result;
 
 	for(int x = 0; x < contactInfo.size(); x++){
 		cout << "Please Enter Contact Name: " << endl;
@@ -27,6 +29,25 @@ int main(){
 		cout << contactInfo[x].getContactName() << " : " << contactInfo[x].getPhoneNumber() << endl;
 	}
 
-	system ("pasue");
+	result = linearSearch(contactInfo,4250161);
+	 if(result == -1){
+		cout << "not found";
+	}else{
+		cout << "found at index " << result;
+	}
+
+	system ("pause");
 	return 0;
+}
+
+int linearSearch(auto Data, auto key)
+{
+	for(int i=0; i < Data.size(); i++)
+	{
+		if (Data[i] == key)
+		{
+			return i;
+		}
+	}
+	return -1;
 }
