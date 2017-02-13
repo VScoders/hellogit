@@ -24,7 +24,7 @@ int main(){
 
 		contactInfo[x].setContactName(name);
 		contactInfo[x].setPhoneNumber(num);
-		V.push_back(contactInfo[x]);
+		V.push_back(contactInfo);
 	}
 
 	cout << endl << "All Contacts" << endl;
