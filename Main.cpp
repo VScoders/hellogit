@@ -11,6 +11,7 @@ int main(){
 	vector<Contact> contactInfo(4);
 	int num;
 	string name;
+	vector<Contact> V;
 	
 	int result;
 
@@ -23,6 +24,7 @@ int main(){
 
 		contactInfo[x].setContactName(name);
 		contactInfo[x].setPhoneNumber(num);
+		V.push_back(contactInfo[x]);
 	}
 
 	cout << endl << "All Contacts" << endl;
@@ -31,7 +33,7 @@ int main(){
 		cout << contactInfo[x].getContactName() << " : " << contactInfo[x].getPhoneNumber() << endl;
 	}
 
-	result = linearSearch(contactInfo,4250161);
+	result = linearSearch(V,4250161);
 	 if(result == -1){
 		cout << "not found";
 	}else{
