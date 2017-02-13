@@ -46,7 +46,7 @@ int linearSearch(auto Data, auto key)
 {
 	for(int i=0; i < Data.size(); i++)
 	{
-		if (Data[i] == key)
+		if (Data[i].getPhoneNumber() == key)
 		{
 			return i;
 		}
