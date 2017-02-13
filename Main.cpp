@@ -11,7 +11,6 @@ int main(){
 	vector<Contact> contactInfo(4);
 	int num;
 	string name;
-	vector<Contact> V;
 	
 	int result;
 
@@ -24,21 +23,28 @@ int main(){
 
 		contactInfo[x].setContactName(name);
 		contactInfo[x].setPhoneNumber(num);
-		V.push_back(contactInfo);
+		
 	}
 
 	cout << endl << "All Contacts" << endl;
 
 	for(int x = 0; x < contactInfo.size(); x++){
-		cout << contactInfo[x].getContactName() << " : " << contactInfo[x].getPhoneNumber() << endl;
+		cout << contactInfo[x].getContactName() << " : " << contactInfo[x].getPhoneNumber() << endl<< endl;
 	}
+	
+while ( num != 0){
+	cout << "Enter number to search (enter 0 to end): ";
+	cin >> num;
 
-	result = linearSearch(V,4250161);
+	result = linearSearch(contactInfo,num);
 	 if(result == -1){
-		cout << "not found";
-	}else{
-		cout << "found at index " << result;
+		cout << "not found"<< endl<< endl;
 	}
+	 else
+	{
+		cout << "found at index: " << result << endl<< endl;
+	}
+}
 
 	system ("pause");
 	return 0;
